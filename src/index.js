@@ -74,7 +74,7 @@ class Board extends React.Component {
         const history = this.state.history
         const current = history[history.length-1]
         const winner = calculateWinner(current.squares);
-        const moves = history.map((step,move) => {
+        const moves = history.map((step, move) => {
             const desc = move ? 'Go to move: ' + move : 'Go to game start';
             return (
                 <li key={move}>
@@ -82,7 +82,6 @@ class Board extends React.Component {
                 </li>
             )
         })
-        
         let status;
         
         if (winner) {
